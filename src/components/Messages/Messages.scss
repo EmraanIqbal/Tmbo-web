@@ -1,0 +1,149 @@
+@import "../../Assets//sass/Variabels.scss";
+.input_search_person {
+  position: relative;
+  input {
+    background-color: #fff;
+    border: medium none;
+    color: #9b9b9b;
+    font-size: 0.75rem;
+    min-height: 42px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #eaecef;
+    padding: 15px;
+    padding-right: 61px;
+  }
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+  button {
+    position: absolute;
+    right: 12px;
+    top: 5px;
+    padding: 7px 0px;
+    &:focus {
+      box-shadow: none;
+    }
+    svg {
+      color: $ParaTextColor;
+    }
+  }
+}
+.messages_owner_main {
+  margin-top: -23px;
+  .chat_img .show_msges {
+    background-color: $ParaTextColor;
+  }
+  .chat_ib h5 {
+    font-size: $h3;
+    font-weight: $fontweigt;
+  }
+  .chat_ib h5 span {
+    font-size: $myFontSizeSmall;
+    font-weight: 400;
+  }
+  .chat_ib p {
+    font-weight: 400;
+  }
+  .inbox_people {
+    background-color: #f3f3f3;
+  }
+  .chat_img .show_active {
+    bottom: auto;
+  }
+  .chat_img .show_msges {
+    top: 0;
+  }
+  .chat_img .show_msges {
+    width: 15px;
+    height: 15px;
+  }
+  .type_msg {
+    padding: 0 !important;
+  }
+  .msg_send_btn {
+    right: -5px;
+    top: 9px;
+  }
+}
+.owner_chatter_upper_div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem 2rem 1rem 2rem;
+  align-items: center;
+}
+.owner_chatter_name {
+  display: flex;
+  span {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .detail_active {
+      border-radius: 50%;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #7ed321;
+      border: 1px solid #fff;
+      position: absolute;
+      bottom: auto;
+      right: 0;
+    }
+  }
+  h3 {
+    font-size: $h3;
+    font-family: $myFont;
+    color: $h1color;
+    font-weight: $fontweigt;
+    padding-left: 1rem;
+    margin-bottom: 0;
+  }
+}
+.vertical_ellipse {
+  font-size: 1.2rem;
+  color: $ParaTextColor;
+  margin-left: 1rem;
+}
+.mesgs .owner_msg_history {
+  height: calc(100vh - 251px);
+}
+@media screen and (max-width: 767px) {
+  .messages_owner_main {
+    padding: 10px 0px 0px 25px;
+  }
+  .input_search_person {
+    display: none;
+  }
+  .owner_chatter_upper_div {
+    padding: 0 6px 0px 10px;
+  }
+  .owner_chatter_name h3 {
+    padding-left: 0.5rem;
+  }
+  .vertical_ellipse {
+    margin-left: 8px;
+  }
+  .messages_owner_main {
+    .input_msg_write {
+      padding: 8px 0px;
+    }
+    .msg_send_btn {
+      top: 17px;
+      right: -3px;
+    }
+    .input_msg_write input {
+      padding: 13px;
+    }
+  }
+  .mesgs .owner_msg_history {
+    height: calc(100vh - 231px);
+  }
+}

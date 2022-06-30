@@ -1,0 +1,179 @@
+@import "../../../../Assets/sass/Variabels.scss";
+.owner_boat_detail_body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  .request_details_sec {
+    width: 33.33%;
+  }
+  .request_details_img {
+    width: 100%;
+    display: inline-block;
+    padding-right: 20px;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+.Request_details_hed {
+  font-size: $h2;
+  color: $myColor;
+  font-family: $myFont;
+  font-weight: $fontweigt;
+}
+.request_details_boat_data {
+  width: 100%;
+  display: inline-block;
+  padding-right: 3rem;
+}
+.requestboat_renter_box {
+  width: 100%;
+  display: flex;
+  border-radius: 4px;
+  justify-content: space-between;
+  padding: 15px;
+  .times_outer p {
+    font-size: $myFontSize;
+    white-space: nowrap;
+  }
+}
+.requester_names {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 40px);
+}
+.avatar_round {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  border-radius: 50%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+.chat_icon {
+  img {
+    width: 30px;
+  }
+}
+.times_outer {
+  p {
+    color: $myColor;
+    font-weight: $fontweigt;
+    margin-top: 43px !important;
+  }
+}
+.request_card_details {
+  width: 100%;
+  display: inline-block;
+  p {
+    font-size: $myFontSize;
+    color: $h1color;
+    font-family: $myFont;
+    display: inline-block;
+    width: 60%;
+    margin-bottom: 0.5rem;
+  }
+  h3 {
+    float: right;
+    font-weight: $fontweigt;
+    color: $myColor;
+    width: 40%;
+    font-size: $myFontSize;
+  }
+}
+.request_details_boat_data {
+  .owner_request_accept,
+  .owner_request_decline {
+    min-width: 105px;
+    height: 35px;
+    font-weight: 400;
+    line-height: initial;
+    border-radius: 10px;
+  }
+  .owner_request_decline {
+    margin-left: 0;
+    background-color: #a60c0c;
+    margin-right: 0;
+    &:hover {
+      color: #a60c0c;
+      background-color: #fff;
+    }
+  }
+}
+.requester_details {
+  width: calc(100% - 120px);
+  padding-left: 1rem;
+}
+.boatRenter_text {
+  font-weight: bolder;
+  color: $h1color;
+  font-size: $h3;
+  font-family: $myFont;
+}
+@media screen and (max-width: 1199px) {
+  .request_details_boat_data {
+    padding-right: 1.5rem;
+  }
+  .request_card_details p {
+    width: 45%;
+  }
+  .request_card_details h3 {
+    width: 42%;
+  }
+  .request_details_boat_data .owner_request_accept {
+    margin-right: 5px;
+  }
+  .requester_names {
+    width: 100%;
+  }
+  .requester_details {
+    width: 100%;
+    padding-left: 5px;
+    margin-top: 5px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .owner_boat_detail_body {
+    flex-wrap: wrap;
+    .request_details_sec {
+      width: 50%;
+    }
+  }
+  .boatRenter_text {
+    margin-top: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .owner_boat_detail_body {
+    padding: 0px 10px 50px 0px;
+    .request_details_sec {
+      width: 100%;
+      padding: 0px 10px 0px 30px;
+    }
+    .request_details_img  {
+        padding-right: 0;
+    }
+  }
+  .Request_details_hed {
+    padding-left: 30px;
+    padding-top: 20px;
+  }
+  .requestboat_renter_box .times_outer {
+    flex-direction: row;
+    p {
+        margin-top: 4px !important;
+        padding-left: 20px;
+    }
+  }
+  .request_details_boat_data {
+    padding-right: 0;
+    padding-top: 15px;
+  }
+}

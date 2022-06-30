@@ -1,0 +1,155 @@
+@import "../../../../../Assets/sass/Variabels.scss";
+.custom_select_main {
+  width: 100%;
+  .w-100 .MuiSelect-select {
+    border-top: 1px solid #b9b2b2;
+    font-style: normal;
+    height: 29px;
+    padding: 0.475rem 0.75rem 0.375rem;
+    font-size: $myFontSizeSmall;
+    font-family: $myFont;
+    em {
+      font-style: normal;
+      font-size: $myFontSizeSmall;
+      font-family: $myFont;
+    }
+  }
+}
+#menu- ul li {
+  font-size: $myFontSizeSmall;
+  font-family: $myFont;
+  a {
+    font-size: $myFontSizeSmall;
+    font-family: $myFont;
+    text-decoration: none;
+    color: $h1color;
+  }
+}
+.react-datepicker-wrapper {
+  input {
+    color: #000000;
+    font-weight: bold;
+    font-family: $myFont;
+    font-size: $myFontSizeSmall;
+    height: 42px;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &::placeholder {
+      color: #000000;
+    }
+  }
+}
+.boat_booking_center {
+  font-family: $myFont;
+
+  .react-datepicker__day--keyboard-selected,
+  .react-datepicker__month-text--keyboard-selected,
+  .react-datepicker__quarter-text--keyboard-selected,
+  .react-datepicker__year-text--keyboard-selected,
+  .react-datepicker__day--in-range,
+  // one day classes start 
+  .react-datepicker__day--selected {
+    background-color: $myColor;
+    border-radius: 100px;
+  }
+
+  .react-datepicker__navigation-icon::before {
+    border-color: $myColor;
+    border-width: 2px 2px 0 0;
+  }
+  .react-datepicker__navigation-icon {
+    top: 6px;
+  }
+}
+.Total_cost_div {
+  display: flex;
+  justify-content: space-between;
+}
+.booking_collapse_detail {
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  margin-bottom: 2rem;
+.accordion-body {
+  padding-top: 0;
+}
+  h2 {
+    .accordion-button {
+      padding-top: 0;
+      padding-left: 0;
+      padding-bottom: 2rem;
+      &:focus {
+        box-shadow: none;
+        background-color: transparent;
+        border-color: transparent;
+        color: $myColor;
+      }
+      &:not(.collapsed){
+        box-shadow: none;
+        background-color: transparent;
+        border-color: transparent;
+        color: $myColor;
+      }
+    }
+  }
+}
+.cost_details_main {
+  .cost_details_inner {
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-size: $myFontSize;
+      font-family: $myFont;
+      text-transform: capitalize;
+      color: $h1color;
+      margin-bottom: 0;
+      line-height: 32px;
+      span {
+        font-size: 1.3rem;
+        vertical-align: bottom;
+      }
+    }
+    p:nth-child(2) {
+      white-space: nowrap;
+    }
+  }
+  .will_charged {
+    font-size: $myFontSizeSmall;
+    color: $redcolor;
+    margin-bottom: 1rem;
+    display: inline-block;
+    width: 100%;
+  }
+}
+.some_notes {
+  width: 100%;
+  display: inline-block;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+  padding-top: 1rem;
+  margin: 1rem 0 2rem;
+  
+  p {
+    font-size: $myFontSize;
+    color: $redcolor;
+    margin-bottom: 2rem;
+  }
+  .list_circle {
+    font-size: $myFontSizeSmall;
+    padding-right: 5px;
+  }
+}
+@media screen and (max-width:767px) {
+  .booking_collapse_detail {
+    .accordion-body {
+      padding: 0;
+    }
+  }
+  
+}

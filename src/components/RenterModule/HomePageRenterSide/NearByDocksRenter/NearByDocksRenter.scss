@@ -1,0 +1,116 @@
+$myFont: "Lato", sans-serif;
+$myColor: #1d3759;
+$myFontSize: 0.875rem;
+$fontweigt: bold;
+$h3: 1rem;
+$h1: 1.625rem;
+$h1color: #000000;
+$h2: 1.375rem;
+$redcolor: #a60c0c;
+
+.NearBy-docks-Renter-main {
+  width: 100%;
+  display: inline-block;
+  padding-top: 1.675rem;
+  padding-bottom: 1.875rem;
+  .section-heding {
+    font-size: $h1;
+    color: $h1color;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+    margin-bottom: 1.3125rem;
+    padding-left: 6px;
+    padding-top: 0.2rem;
+  }
+  .card {
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 0px 10px -5px;
+    .boart-img {
+      width: 100%;
+      height: 270px;
+      display: inline-block;
+      position: relative;
+      .boart-count-main {
+        display: flex;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        justify-content: space-between;
+        .boart-count,
+        .boart-heart {
+          width: 30px;
+          height: 30px;
+          display: inline-block;
+          border-radius: 50%;
+          background-color: $myColor;
+          text-align: center;
+          color: #eeeeff;
+          line-height: 2rem;
+          font-size: 0.75rem;
+          position: initial;
+        }
+        .boart-heart {
+          background-color: #fff;
+          color: #ccc;
+          cursor: pointer;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px 10px 0px 0px;
+    }
+    .card-body {
+      padding: 1rem;
+    }
+    .boart-desc {
+      h2 {
+        font-size: $h2;
+        color: #9b9b9b;
+        font-family: $myFont;
+        font-weight: $fontweigt;
+        display: inline-block;
+      }
+      p {
+        font-size: $myFontSize;
+        color: $myColor;
+        font-weight: 500;
+      }
+      h3 {
+        font-size: $h3;
+        color: $redcolor;
+        font-weight: $fontweigt;
+        font-family: $myFont;
+      }
+    }
+  }
+  @media screen and (max-width:1199px) {
+    .card .boart-img {
+      height: 240px;
+    }
+    
+  }
+  @media screen and (max-width:991px) {
+    .card .boart-img {
+      height: 200px;
+    }
+    
+  }
+  @media screen and (max-width:767px) {
+    .card  {
+     margin-bottom: 20px;
+    }
+    
+  }
+  @media screen and (max-width:575px) {
+    .card  {
+     margin-bottom: 15px;
+    }
+    padding-top: 1rem;
+    
+  }
+}

@@ -1,0 +1,356 @@
+@import "../../../Assets/sass/Variabels.scss";
+@mixin circle {
+  border-radius: 50%;
+  display: inline-block;
+}
+@mixin circleImage {
+  border-radius: 50%;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@mixin prelist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@mixin preflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inbox_msg {
+  clear: both;
+  overflow: hidden;
+  box-shadow: 0 0 6px lightgrey;
+}
+.top_spac {
+  margin: 20px 0 0;
+}
+
+.recent_heading {
+  float: left;
+  width: 40%;
+}
+.inbox_people {
+  background: #fff none repeat scroll 0 0;
+  float: left;
+  overflow: hidden;
+  width: 40%;
+  box-shadow: 5px 0 5px -5px lightgray, -5px 0 10px -40px lightgray;
+  height: calc(100vh - 101px);
+}
+.srch_bar {
+  display: inline-block;
+  text-align: right;
+  width: 60%;
+}
+.headind_srch {
+  padding: 10px 29px 10px 20px;
+  overflow: hidden;
+  border-bottom: 1px solid #eaecef;
+  h2 {
+    color: $myColor;
+  }
+}
+.srch_bar input {
+  border: 0;
+  border-width: 0 0 1px 0;
+  width: 80%;
+  padding: 2px 0 4px 6px;
+  background: none;
+  cursor: pointer;
+}
+.srch_bar .input-group-addon button {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  padding: 0;
+  color: #ccc;
+  font-size: 18px;
+}
+.srch_bar .input-group-addon {
+  margin: 0 0 0 -27px;
+}
+
+.chat_ib h5 {
+  font-size: $myFontSize;
+  color: $h1color;
+  margin: 0 0 8px 0;
+  font-family: $myFont;
+}
+.chat_ib h5 span {
+  font-size: $myFontSizeSmall;
+  color: $LimeGrayColor;
+  font-weight: $fontweigt;
+  font-family: $myFont;
+  float: right;
+}
+.chat_ib p {
+  font-size: $myFontSize;
+  color: $ParaTextColor;
+  margin: auto;
+  font-weight: $fontweigt;
+  font-family: $myFont;
+}
+.chat_img {
+  @include circle;
+  position: relative;
+  float: left;
+  width: 47px;
+  height: 47px;
+  img {
+    @include circleImage;
+  }
+  .show_msges {
+    width: 18px;
+    height: 18px;
+    @include circle;
+    border: 1px solid #fff;
+    background-color: #a60c0c;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: $myFontSizeSmall;
+    @include preflex;
+    color: #fff;
+  }
+  .show_active {
+    @include circle;
+    width: 15px;
+    height: 15px;
+    background-color: #7ed321;
+    border: 1px solid #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+.chat_ib {
+  float: left;
+  padding: 0 0 0 15px;
+  width: calc(100% - 47px);
+}
+
+.chat_people {
+  overflow: hidden;
+  clear: both;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 15px;
+}
+.chat_list {
+  margin: 0;
+  padding: 18px 16px 0px;
+  cursor: pointer;
+}
+.inbox_chat {
+  height: calc(100% - 55px);
+  overflow-y: auto;
+}
+
+.active_chat {
+  background: #ebebeb;
+}
+.incoming_msg {
+  display: flex;
+}
+.incoming_msg_img {
+  width: 40px;
+  height: 40px;
+  @include circle;
+  img {
+    @include circleImage;
+  }
+}
+.received_msg {
+  display: inline-block;
+  padding: 0 0 0 10px;
+  vertical-align: top;
+  width: 92%;
+}
+.received_withd_msg p {
+  background-color: $LimeLightColor;
+  color: $myColor;
+  font-size: $myFontSizeSmall;
+  font-family: $myFont;
+  font-weight: $fontweigt;
+  margin: 0;
+  padding: 15px;
+  width: 100%;
+  border-radius: 0 12px 12px 12px;
+  min-height: 90px;
+}
+.time_date {
+  color: $myColor;
+  font-size: $myFontSizeSmall;
+  font-family: $myFont;
+  margin: 10px 0 10px;
+  display: block;
+  text-align: center;
+}
+.received_withd_msg {
+  width: 57%;
+}
+.mesgs {
+  float: left;
+  padding: 20px 0px 0 0px;
+  width: 60%;
+  // box-shadow: 0 0 4px lightgrey;
+}
+
+.sent_msg p {
+  background-color: $LimeGrayColor;
+  color: $h1color;
+  font-size: $myFontSize;
+  font-family: $myFont;
+  font-weight: $fontweigt;
+  margin: 0;
+  padding: 15px;
+  width: 100%;
+  border-radius: 12px 0 12px 12px;
+}
+.outgoing_msg {
+  overflow: hidden;
+  margin: 26px 0 26px;
+}
+.sent_msg {
+  width: 46%;
+  margin: auto;
+}
+.input_msg_write input {
+  background-color: #fff;
+  border: medium none;
+  color: $ParaTextColor;
+  font-size: $myFontSizeSmall;
+  min-height: 42px;
+  width: calc(100% - 60px);
+  border-radius: 29px;
+  border: 1px solid #eaecef;
+  padding: 15px;
+}
+
+.type_msg {
+  position: relative;
+  background-color: #f3f3f3;
+  padding: 15px 30px;
+}
+.msg_send_btn {
+  cursor: pointer;
+  height: 33px;
+  position: absolute;
+  right: 13px;
+  top: 22px;
+  width: 33px;
+  background-color: transparent;
+  border: 0;
+  img {
+    width: 100%;
+  }
+}
+.msg_history {
+  height: calc(100vh - 238px);
+  overflow-y: auto;
+  box-shadow: 0 0 4px lightgrey;
+  padding: 20px 15px 0 25px;
+}
+.chatter_name {
+  padding: 0px 15px 17.33px;
+  h3 {
+    font-size: $h3;
+    color: $ParaTextColor;
+    font-family: $myFont;
+    font-weight: $fontweigt;
+    margin-bottom: 0;
+  }
+}
+.msgs_history_dots {
+  @include prelist;
+  text-align: right;
+  li {
+    display: inline-block;
+    margin-left: 10px;
+    width: 10px;
+    height: 10px;
+    @include circle;
+    background-color: $myColor;
+  }
+}
+.input_msg_write {
+  display: flex;
+  span {
+    @include preflex;
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .type_msg {
+    padding: 15px 20px;
+  }
+  .input_msg_write span {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .inbox_people {
+    width: 58px;
+  }
+  .mesgs {
+    width: calc(100% - 58px);
+  }
+  .headind_srch {
+    padding: 10px;
+  }
+  .recent_heading {
+    width: 100%;
+    h2 {
+      font-size: 1rem;
+    }
+  }
+  .srch_bar {
+    display: none;
+  }
+  .chat_list {
+    margin: 0;
+    padding: 6px 0 5px 8px;
+  }
+  .chat_img {
+    width: 40px;
+    height: 40px;
+  }
+  .chat_ib {
+    display: none;
+  }
+  .received_withd_msg,
+  .sent_msg {
+    width: 72%;
+  }
+  .msg_send_btn {
+    top: 17px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .received_msg {
+    width: calc(100% - 40px);
+  }
+  .received_withd_msg,
+  .sent_msg {
+    width: 82%;
+  }
+  .type_msg {
+    padding: 10px 12px;
+  }
+  .msg_send_btn {
+    right: 2px;
+  }
+  .input_msg_write input {
+    width: calc(100% - 57px);
+  }
+  .msgs_history_dots {
+    padding-bottom: 12px;
+  }
+  .msg_history {
+    height: calc(100vh - 225px);
+  }
+}

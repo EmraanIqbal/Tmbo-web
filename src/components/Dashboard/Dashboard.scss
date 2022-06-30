@@ -1,0 +1,30 @@
+.dashboard-wrapper {
+  padding: 10px 20px;
+
+  .long-card {
+    margin: 25px 0px 10px 0px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+  }
+}
+.booking_card_db {
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 991px) {
+  .dash_cards {
+    width: 100%;
+    min-width: initial !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .dashboard-wrapper {
+    padding-left: 33px;
+  }
+  .dash_cards {
+    margin-top: 15px !important;
+  }
+  .booking_card_db {
+    margin-bottom: 15px;
+  }
+}

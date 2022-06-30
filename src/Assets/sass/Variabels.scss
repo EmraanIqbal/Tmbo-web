@@ -1,0 +1,34 @@
+$myFont: "Lato", sans-serif;
+$myColor: #1d3759;
+$myFontSize: 0.875rem;
+$myFontSizeSmall: 0.75rem;
+$fontweigt: bold;
+$h1: 1.625rem;
+$h1color: #000000;
+$h2: 1.375rem;
+$h3: 1rem;
+$ParaTextColor: #9b9b9b;
+$redcolor: #a60c0c;
+$myFontSizeTwo: 1rem;
+$LimeGrayColor: #acb1c0;
+$LimeLightColor: #eeeeff;
+$ProName: 1.1rem;
+@media screen and (max-width: 767px) {
+  $h1: 1.5rem !important;
+  $h2: 1.125rem !important;
+  $h3: 0.875rem !important;
+  $myFontSizeTwo: 0.875rem !important;
+  $ProName: 0.875rem !important;
+  h1 {
+    font-size: $h1;
+  }
+  h2 {
+    font-size: $h2;
+  }
+  h3 {
+    font-size: $h3;
+  }
+  p {
+    font-size: $h3; 
+  }
+}

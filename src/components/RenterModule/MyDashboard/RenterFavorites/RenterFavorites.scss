@@ -1,0 +1,138 @@
+@import "../../../../Assets/sass/Variabels.scss";
+@mixin imgOuter {
+  border-radius: 50%;
+  display: inline-block;
+}
+@mixin imgRound2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@mixin flexbetween {
+  display: flex;
+  justify-content: space-between;
+}
+.my_dashboard_favorites {
+  width: 100%;
+  display: inline-block;
+  box-shadow: 0 0 4px lightgrey;
+  min-height: 100vh;
+  padding: 20px 30px 80px 30px;
+}
+.favorites_box_section {
+  width: 100%;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0px 10px -5px;
+  margin-bottom: 1.25rem;
+  transition: all 0.3s ease-in-out;
+  .favorits_img {
+    width: 100%;
+    height: 270px;
+    display: inline-block;
+    position: relative;
+    img {
+      border-radius: 10px 10px 0px 0px;
+      @include imgRound2;
+    }
+  }
+  .favorits_count {
+    @include flexbetween;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    .favorits_count_num,
+    .favorits_count_icon {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: $myColor;
+      text-align: center;
+      color: #eeeeff;
+      line-height: 2rem;
+      font-size: $myFontSize;
+      position: initial;
+    }
+    .favorits_count_icon {
+      background-color: #fff;
+      color: $myColor;
+    }
+  }
+  .favorites_desc {
+    width: 100%;
+    display: inline-block;
+    padding: 1rem;
+  }
+  .favorites_stars {
+    @include flexbetween;
+    h3 {
+      font-size: $myFontSize;
+      color: $ParaTextColor;
+      font-family: $myFont;
+    }
+  }
+  .favorites_coutres_name {
+    font-size: $myFontSize;
+    color: $myColor;
+    font-family: $myFont;
+  }
+  .favorites_detail {
+    font-size: $myFontSize;
+    color: $ParaTextColor;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+  }
+  .favorites_book {
+    @include flexbetween;
+    align-items: center;
+    .favorite_book_btn {
+      background-color: $myColor;
+      color: #fff;
+      line-height: 42px;
+      margin-right: 15px;
+      height: 36px;
+      font-size: $myFontSize;
+      font-weight: normal;
+      width: auto;
+      padding: 0px 20px;
+      line-height: 31px;
+      &:hover {
+        background-color: #fff;
+        box-shadow: 0px 15px 20px rgb(27 54 89 / 40%);
+        -moz-box-shadow: 0px 15px 20px rgba(27, 54, 89, 0.4);
+        -webkit-box-shadow: 0px 15px 20px rgb(27 54 89 / 40%);
+        color: #1d3759;
+        transform: translateY(-7px);
+      }
+      &:focus {
+        box-shadow: none;
+        box-shadow: 0px 15px 20px rgb(27 54 89 / 40%);
+        -moz-box-shadow: 0px 15px 20px rgba(27, 54, 89, 0.4);
+        -webkit-box-shadow: 0px 15px 20px rgb(27 54 89 / 40%);
+      }
+    }
+    h3 {
+      font-size: $myFontSize;
+      color: $redcolor;
+      font-weight: $fontweigt;
+      font-family: $myFont;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    .favorits_img {
+      height: 200px;
+    }
+    .favorites_book .favorite_book_btn {
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
+    .favorites_book {
+      flex-wrap: wrap;
+      justify-content: center;
+      
+    }
+  }
+}

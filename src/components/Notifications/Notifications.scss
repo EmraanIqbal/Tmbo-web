@@ -1,0 +1,89 @@
+@import "../../Assets/sass/Variabels.scss";
+.notify_heading {
+  font-size: $h2;
+  color: $h1color;
+  font-family: $myFont;
+  font-weight: $fontweigt;
+}
+.notification_list_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem;
+  background-color: #efefef;
+  &:hover {
+    background-color: #fff;
+  }
+  &.active_list {
+    background-color: #fff;
+  }
+}
+.Notifications_main .add-new-boats-wrapper .boat-card {
+  background: transparent;
+  padding: 0;
+  box-shadow: 0 1px 6px lightgray;
+}
+.chat_detail_text {
+  padding-left: 2rem;
+  width: calc(100% - 65px);
+  h3 {
+    font-size: $h3;
+    color: $h1color;
+    font-family: $myFont;
+    font-weight: $fontweigt;
+  }
+  p {
+    font-size: $myFontSize;
+    color: $h1color;
+    font-family: $myFont;
+  }
+  p:last-child {
+    font-size: $myFontSizeSmall;
+    color: $ParaTextColor;
+    line-height: 0;
+    margin-bottom: 0;
+  }
+}
+.notify_img_text {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 40px);
+  span {
+    width: 65px;
+    height: 65px;
+    display: inline-block;
+    border-radius: 100px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 100px;
+    }
+  }
+}
+.dots_ellipse i {
+  font-size: 1.5rem;
+  color: #7f7f7f;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .notify_heading {
+    padding: 1.5rem 0 0 2.5rem;
+  }
+  // .Notifications_main .add-new-boats-wrapper .boat-card {
+  //   padding: 0 0px 30px 20px;
+  // }
+  .mob_notification {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 575px) {
+  .chat_detail_text {
+    padding-left: 0;
+    width: 100%;
+    padding-top: 1rem;
+  }
+  .notification_list_main {
+    padding: 1.2rem;
+  }
+}

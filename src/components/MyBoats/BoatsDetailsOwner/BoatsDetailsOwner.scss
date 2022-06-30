@@ -1,0 +1,87 @@
+@import "../../../Assets/sass/Variabels.scss";
+.BoatsDetailsOwner_main {
+  .heading_h2 h2,
+  .heading_h3 h3 {
+    font-size: $h2;
+    font-weight: $fontweigt;
+    color: $h1color;
+    font-family: $myFont;
+    display: inline-block;
+  }
+  .heading_h3 {
+    display: flex;
+    flex-wrap: wrap;
+    h3 {
+      font-size: $h3;
+    }
+    h3:first-child {
+      width: 27%;
+    }
+    @media screen and (max-width: 767px) {
+      h3:first-child {
+        width: 45%;
+      }
+    }
+  }
+}
+.show_details_link a {
+  color: $redcolor;
+  font-weight: $fontweigt;
+  text-decoration: none;
+}
+.heading_h2 span {
+  float: right;
+  font-family: $myFont;
+  font-weight: $fontweigt;
+  color: $redcolor;
+  font-size: $h3;
+  cursor: pointer;
+}
+.availabilty_detail {
+  .accordion-body {
+    display: flex;
+    flex-wrap: wrap;
+    .avail_time_box {
+      width: 23%;
+      box-shadow: 0 0 6px lightgrey;
+      padding: 15px;
+      margin-right: 2%;
+      margin-bottom: 2%;
+      border-radius: 10px;
+      padding-bottom: 0;
+    }
+  }
+  .accordion-header {
+    .accordion-button {
+      font-size: 1.25rem;
+      font-weight: bold;
+      &:not(.collapsed) {
+        color: $myColor;
+        background-color: transparent;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .accordion-body .avail_time_box {
+      width: 31.33%;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .accordion-body .avail_time_box {
+      width: 48%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .accordion-body .avail_time_box {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    .accordion-header .accordion-button {
+      font-size: 1rem;
+    }
+  }
+}

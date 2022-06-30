@@ -1,0 +1,167 @@
+@import "../../Assets/sass/Variabels.scss";
+.owner_my_profile_main {
+  width: 80%;
+  height: 100%;
+  margin-top: 1rem;
+  border-radius: 4px;
+  background-color: #f9f9fb;
+  border-radius: 12px;
+}
+.my_profile_heding {
+  font-size: $h3;
+  color: $myColor;
+  font-family: $myFont;
+  margin-bottom: 0;
+  font-weight: $fontweigt;
+}
+.my_profile_inner {
+  display: flex;
+  padding: 20px;
+}
+.my_profile_details {
+  padding-left: 50px;
+  width: calc(100% - 290px);
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  .my_pro_names_div {
+    width: 50%;
+    h3 {
+      font-size: $h3;
+      color: $h1color;
+      font-family: $myFont;
+    }
+    .bold_text {
+      font-weight: $fontweigt;
+    }
+    p {
+      font-size: $myFontSize;
+      color: $ParaTextColor;
+    }
+  }
+  .edit_me {
+    position: absolute;
+    right: -75px;
+    cursor: pointer;
+  }
+}
+.my_profile_marcus_img {
+  width: 200px;
+  span {
+    width: 100%;
+    height: 200px;
+    display: inline-block;
+    border-radius: 4px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+  }
+  p {
+    text-align: center;
+    font-size: $h3;
+    color: $myColor;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+    padding-top: 5px;
+  }
+}
+// edit profile details start
+.my_profile_edit_img {
+  .edit_photo_renter label span img,
+  .edit_photo_renter label span,
+  .edit_photo_renter label,
+  .edit_photo_renter label img {
+    border-radius: 4px;
+  }
+  .edit_photo_renter label span,
+  .edit_photo_renter label img {
+    opacity: 0.6;
+  }
+  .edit_photo_renter label::after {
+    right: initial;
+    bottom: initial;
+    top: 46%;
+    left: 45%;
+  }
+}
+.edit_profile_details {
+  width: calc(100% - 200px);
+  form {
+    width: 100%;
+    label {
+      font-size: $myFontSize;
+      color: $h1color;
+      font-weight: $fontweigt;
+      font-family: $myFont;
+    }
+    input {
+      color: $h1color;
+      font-family: $myFont;
+      font-size: $myFontSize;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  .my_pro_names_div {
+    width: 48.5%;
+  }
+}
+// end edit profile
+@media screen and (max-width: 1199px) {
+  .my_profile_details {
+    .my_pro_names_div {
+      width: 100%;
+    }
+  }
+  .owner_my_profile_main {
+      width: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .my_profile_details {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 15px;
+    position: static;
+    .my_pro_names_div {
+      width: 50%;
+    }
+    .edit_me {
+      right: 20px;
+      top: 20px;
+    }
+  }
+  .my_profile_inner {
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .owner_my_profile_main {
+    width: 100%;
+  }
+  .edit_profile_details .my_pro_names_div {
+    width: 48.5%;
+}
+}
+@media screen and (max-width: 767px) {
+  .owner_my_profile_main {
+    width: 92%;
+    margin-left: 8%;
+  }
+  .my_profile_heding {
+    padding-left: 3rem;
+    padding-top: 1rem;
+  }
+  .my_profile_details .my_pro_names_div {
+    width: 100%;
+  }
+  .my_profile_marcus_img {
+    width: 180px;
+    span {
+      height: 180px;
+    }
+  }
+}

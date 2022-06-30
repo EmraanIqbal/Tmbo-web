@@ -1,0 +1,231 @@
+@import "../../../../Assets/sass/Variabels.scss";
+@import "../../../../Assets/sass/mixin.scss";
+@mixin imgOuter {
+  border-radius: 50%;
+  display: inline-block;
+}
+@mixin imgRound2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.my_trips_boats_details {
+  width: 100%;
+  display: inline-block;
+  box-shadow: 0 0 4px lightgrey;
+  padding: 20px 30px 80px 30px;
+  min-height: 100vh;
+
+}
+.my_trips_detail_img {
+  width: 100%;
+  height: 250px;
+  img {
+    @include imgRound2;
+  }
+}
+.my_trips_boats_details_bottom {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid $LimeLightColor;
+  h3 {
+    font-size: $h3;
+    color: $h1color;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+  }
+  p {
+    font-size: $myFontSize;
+    color: $redcolor;
+    font-family: $myFont;
+    margin-bottom: 0;
+  }
+  a {
+    width: 140px;
+    height: 42px;
+    text-align: center;
+    border: 1px solid $ParaTextColor;
+    color: $ParaTextColor;
+    font-family: $myFont;
+    font-size: $myFontSize;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.my_trips_booking_details {
+  width: 100%;
+  display: inline-block;
+  padding: 20px 0px;
+  h3 {
+    font-size: $h3;
+    color: $h1color;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+    margin-bottom: 1rem;
+  }
+}
+.Bdetails_inner {
+  width: 80%;
+  display: flex;
+  p {
+    font-size: $myFontSize;
+    color: $h1color;
+    font-family: $myFont;
+    width: 50%;
+  }
+  p:nth-child(2) {
+    color: $myColor;
+  }
+}
+.my_trips_boat_owner {
+  width: 100%;
+  display: inline-block;
+  h3 {
+    font-size: $h3;
+    color: $h1color;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+  }
+}
+.my_trips_boat_owner_box {
+  width: 100%;
+  display: inline-block;
+  padding: 10px 20px 15px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px #c2bfbf;
+  margin-bottom: 1.25rem;
+  .owner_name_desc {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $LimeLightColor;
+    padding-bottom: 10px;
+    position: relative;
+    img {
+      width: 33px;
+    }
+  }
+  .owner_img_name {
+    display: flex;
+    align-items: center;
+    .owner_img {
+      width: 60px;
+      height: 60px;
+      margin-right: 10px;
+      @include imgOuter;
+      img {
+        @include imgRound2;
+      }
+    }
+    .owner_name_text {
+      display: inline-block;
+      h3 {
+        margin-bottom: 0;
+      }
+      a {
+        font-size: $myFontSize;
+        color: $ParaTextColor;
+        margin-bottom: 0;
+        text-decoration: none;
+        font-weight: $fontweigt;
+        word-break: break-all;
+      }
+    }
+  }
+  .owner_date {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px 0;
+    font-family: $myFont;
+    p {
+      font-size: $myFontSizeSmall;
+      color: $h1color;
+      margin-bottom: 0;
+    }
+  }
+}
+.cancel_booking_div {
+  display: flex;
+  justify-content: center;
+  .incpection_btn {
+    background-color: $myColor;
+    color: #fff;
+    line-height: 42px;
+    margin-right: 15px;
+    &:hover {
+      background-color: #fff;
+      box-shadow: 0px 15px 20px rgb(27 54 89 / 40%);
+      -moz-box-shadow: 0px 15px 20px rgba(27, 54, 89, 0.4);
+      -webkit-box-shadow: 0px 15px 20px rgb(27 54 89 / 40%);
+      color: #1d3759;
+      transform: translateY(-7px);
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .cancel_booking {
+    background-color: $redcolor;
+    color: #fff;
+    line-height: 42px;
+    &:hover {
+      background-color: #fff;
+      box-shadow: 0px 15px 20px rgb(89 33 27 / 40%);
+      -moz-box-shadow: 0px 15px 20px rgb(89 33 27 / 40%);
+      -webkit-box-shadow: 0px 15px 20px rgb(89 33 27 / 40%);
+      color: #1d3759;
+      transform: translateY(-7px);
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .my_trips_detail_img {
+    height: 200px;
+  }
+  .Bdetails_inner {
+    width: 100%;
+  }
+  .my_trips_boats_details_bottom a {
+    width: 99px;
+  }
+  .my_trips_boat_owner_box .owner_img_name {
+    flex-wrap: wrap;
+  }
+  .my_trips_boat_owner_box .owner_img_name .owner_name_text {
+    margin-left: 6px;
+  }
+  .my_trips_boat_owner_box .owner_name_desc a img {
+    position: absolute;
+    right: 0;
+  }
+  .cancel_booking_div {
+    flex-wrap: wrap;
+    .incpection_btn {
+      margin: 0px 0px 10px;
+    }
+    .cancel_booking, .incpection_btn {
+      line-height: 44px;
+      padding: 0px 30px;
+    }
+  }
+  .my_trips_boat_owner_box {
+    padding-right: 10px;
+  }
+  .my_trips_boat_owner_box .owner_date span {
+    font-size: 12px;
+    width: 83px;
+    text-align: right;
+  }
+  .my_trips_boat_owner_box .owner_date p {
+    padding-right: 5px;
+  }
+}

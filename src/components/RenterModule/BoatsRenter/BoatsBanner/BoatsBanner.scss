@@ -1,0 +1,101 @@
+@import "../../../../Assets/sass/Variabels.scss";
+
+.Boats_banner_main {
+  // padding-bottom: 2rem;
+  // padding-top: 6.25rem;
+  width: 100%;
+  display: inline-block;
+  overflow-x: hidden;
+  .banner-heding {
+    color: #eeeeff;
+    font-size: 2.5rem;
+    font-weight: $fontweigt;
+    max-width: 779px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: $myFontSize;
+    color: #eeeeff;
+    text-align: center;
+    font-family: $myFont;
+    font-weight: $fontweigt;
+    max-width: 759px;
+    margin: auto;
+    padding-bottom: 2rem;
+    line-height: 2rem;
+  }
+  .carousel-caption {
+    top: 25%;
+    z-index: 99;
+  }
+  .carousel-indicators {
+    z-index: 999;
+  }
+  .carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $myColor;
+    opacity: 1;
+  }
+  .carousel-indicators .active {
+    background-color: #fff;
+  }
+  .carousel-inner,
+  .carousel-item {
+    height: 562px;
+    position: relative;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .banner_black_layer {
+   position: relative;
+   width: 100%;
+   height: 100%;
+  }
+  .banner_black_layer::before {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, transparent 0, transparent 30%, #000);
+    opacity: 0.8;
+  }
+  @media screen and (max-width: 991px) {
+    .carousel-inner,
+    .carousel-item {
+      height: 462px;
+    }
+    .carousel-caption {
+      top: 9.5%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .banner-heding {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .carousel-caption {
+      padding-top: 0;
+      left: 0;
+      padding: 0px 15px;
+      width: 100%;
+    }
+    
+  }
+  @media screen and (max-width: 575px) {
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-bottom: 0;
+    }
+  }
+}

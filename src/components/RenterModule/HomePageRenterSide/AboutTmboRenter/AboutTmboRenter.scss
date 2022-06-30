@@ -1,0 +1,48 @@
+@import "../../../../Assets/sass/Variabels.scss";
+
+.about-tmbo-main {
+  width: 100%;
+  display: inline-block;
+  padding: 50px 0px;
+  background-color: #f9f9f9;
+  h1 {
+    font-size: $h1;
+    color: $h1color;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+  }
+  p {
+    font-size: $myFontSize;
+    color: #666666;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+    max-width: 430px;
+  }
+  .about-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .about-image {
+    width: 90%;
+    height: 400px;
+    display: inline-block;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+  }
+  @media screen and (max-width:767px) {
+    .about-image {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    
+  }
+}

@@ -1,0 +1,104 @@
+@import "../../../../Assets/sass/Variabels.scss";
+
+.boats_banner_wrapper {
+  width: 100%;
+  display: inline-block;
+  background-color: #fff;
+  .section-heding {
+    font-size: $h2;
+    color: $h1color;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+    margin-bottom: 1.3125rem;
+    padding-left: 6px;
+  }
+  .cruise-detail-hed {
+    margin-top: 1.5rem;
+  }
+  .slick-prev {
+    left: 25px;
+    z-index: 9;
+  }
+  .slick-next {
+    z-index: 9;
+    right: 25px;
+  }
+  .slick-prev,
+  .slick-next {
+    top: 50%;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+  }
+  .slick-prev:before {
+    content: "\f053";
+  }
+  .slick-next:before {
+    content: "\f054";
+  }
+  .slick-dots {
+    width: 100%;
+    display: inline-block;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 5px 0 4px -4px lightgray, -5px 0 4px -4px lightgray;
+    -moz-box-shadow: 5px 0 4px -4px lightgray, -5px 0 4px -4px lightgray;
+    -webkit-box-shadow: 5px 0 4px -4px lightgray, -5px 0 4px -4px lightgray;
+    bottom: -10px;
+    li {
+      width: 120px;
+      height: 120px;
+      a {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+.boats_details_main_img {
+  position: relative;
+  height: 550px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.boart-heart {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #ccc;
+  cursor: pointer;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 0.75rem;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+@media screen and (max-width: 767px) {
+  .boats_details_main_img {
+    height: 350px;
+  }
+  .boats_banner_wrapper .slick-prev,
+  .boats_banner_wrapper .slick-next {
+    top: 38%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .boats_details_main_img {
+    height: 250px;
+  }
+  .boats_banner_wrapper .slick-prev,
+  .boats_banner_wrapper .slick-next {
+    top: 33%;
+  }
+}

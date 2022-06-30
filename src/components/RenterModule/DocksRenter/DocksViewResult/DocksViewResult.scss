@@ -1,0 +1,144 @@
+@import "../../../../Assets/sass/Variabels.scss";
+
+.ViewResult-main {
+  width: 100%;
+  display: inline-block;
+  padding-top: 1.475rem;
+  .section-heding {
+    font-size: $h2;
+    color: $h1color;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+    margin-bottom: 1.3125rem;
+    padding-left: 6px;
+  }
+  a {
+    text-decoration: none;
+    &:hover .card {
+      text-decoration: none;
+      transform: translateY(-10px);
+    }
+  }
+  .card {
+    border: 0;
+    border-radius: 10px;
+    box-shadow: none;
+    margin-bottom: 1.25rem;
+    cursor: pointer;
+
+    .boart-img {
+      width: 100%;
+      height: 270px;
+      display: inline-block;
+      border-radius: 10px;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+      overflow: hidden;
+        &:hover img {
+          transform: scale(1.05);
+        }
+      img {
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transition: all 0.3s ease-in-out;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        
+      }
+      .boart-count-main {
+        display: flex;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        justify-content: flex-end;
+        .boart-count,
+        .boart-heart {
+          width: 30px;
+          height: 30px;
+          display: inline-block;
+          border-radius: 50%;
+          background-color: $myColor;
+          text-align: center;
+          color: #eeeeff;
+          line-height: 2rem;
+          font-size: 0.75rem;
+          position: initial;
+        }
+        .boart-heart {
+          background-color: #fff;
+          color: #ccc;
+          cursor: pointer;
+        }
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px 10px 0px 0px;
+      border-radius: 10px;
+    }
+    .card-body {
+      padding: 1rem;
+    }
+    .boart-desc {
+      h2 {
+        font-size: $h2;
+        color: #9b9b9b;
+        font-family: $myFont;
+        font-weight: $fontweigt;
+        display: inline-block;
+      }
+      p {
+        font-size: $myFontSize;
+        color: $myColor;
+        font-weight: 500;
+      }
+      h3 {
+        font-size: $h3;
+        color: $redcolor;
+        font-weight: $fontweigt;
+        font-family: $myFont;
+      }
+    }
+  }
+  .boart-rating {
+    span:first-child {
+      font-size: 1rem;
+    }
+    span {
+      font-weight: bold;
+      padding-left: 5px;
+      font-size: $myFontSize;
+    }
+    .out_of_ratting {
+      font-weight: lighter;
+      span {
+        padding-left: 0;
+        font-size: $myFontSize;
+        font-weight: lighter;
+      }
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    .card .boart-img {
+      height: 240px;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .card .boart-img {
+      height: 200px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .card {
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    .card {
+      margin-bottom: 15px;
+    }
+    padding-top: 1rem;
+  }
+}

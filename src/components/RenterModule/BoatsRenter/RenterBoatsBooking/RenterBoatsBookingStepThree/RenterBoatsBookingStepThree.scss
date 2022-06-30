@@ -1,0 +1,38 @@
+@import "../../../../../Assets/sass/Variabels.scss";
+#progressbar .approved2::after {
+  border-bottom: 3px solid $redcolor;
+}
+.boat_booking_center {
+  .my_trips_booking_details {
+    padding: 20px;
+    box-shadow: 0 0 4px lightgrey;
+    border-radius: 20px;
+    h3 {
+      display: inline-block;
+    }
+    .Bdetails_inner h3 {
+      font-size: $myFontSize;
+      color: $redcolor;
+      font-weight: 400;
+    }
+    .edit_booking_btn {
+      float: right;
+      min-width: 130px;
+      height: 40px;
+      line-height: 38px;
+      text-decoration: none;
+    }
+  }
+  .send_book_request {
+    margin: 1.875rem auto 0;
+    line-height: 55px;
+  }
+
+  @media screen and (max-width: 575px) {
+    .my_trips_booking_details .edit_booking_btn {
+      float: none;
+      margin-bottom: 10px;
+    }
+  }
+}
+

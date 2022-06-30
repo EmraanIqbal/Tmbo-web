@@ -1,0 +1,79 @@
+@import "../../../../Assets/sass/Variabels.scss";
+
+.CategoriesRenter-main {
+  width: 100%;
+  display: inline-block;
+  padding-top: 1.875rem;
+  .section-heding {
+    font-size: $h1;
+    color: $h1color;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+    margin-bottom: 1.3125rem;
+    padding-left: 6px;
+  }
+  .caterories-item {
+    border-radius: 10px;
+    box-shadow: 0 0px 10px -5px;
+    span {
+      width: 100%;
+      height: 170px;
+      display: inline-block;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px 10px 0px 0px;
+      }
+    }
+    h3 {
+      color: $myColor;
+      font-weight: $fontweigt;
+      font-family: $myFont;
+      font-size: $h3;
+      text-align: center;
+      width: 100%;
+      padding: 0px 15px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  .slick-prev:before {
+    color: $myColor;
+    content: "\f104";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    opacity: 1;
+  }
+  .slick-next:before {
+    color: $myColor;
+    content: "\f105";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 600;
+    opacity: 1;
+  }
+  .slick-prev,
+  .slick-next {
+    z-index: 9;
+  }
+  .slick-prev {
+    left: -8px;
+  }
+  .slick-prev, .slick-next {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .slick-next {
+    right: -11px;
+  }
+  .slick-slide {
+    padding: 0px 6px;
+  }
+  .slick-slider .slick-track {
+    margin-bottom: 0.2rem;
+  }
+}

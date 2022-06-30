@@ -1,0 +1,135 @@
+@import "../../../../Assets/sass/Variabels.scss";
+@mixin imgOuter {
+  border-radius: 50%;
+  display: inline-block;
+}
+@mixin imgRound {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.my_trips_boats {
+  width: 100%;
+  display: inline-block;
+  height: 100%;
+  overflow-y: auto;
+  box-shadow: 0 0 4px lightgrey;
+  padding: 20px 30px 0 30px;
+  min-height: 100vh;
+  .nav-tabs {
+    .nav-link {
+      color: $LimeGrayColor;
+      &.active {
+        border-color: transparent;
+        border-bottom: 4px solid $myColor;
+        color: $myColor;
+      }
+    }
+  }
+  .tab-content {
+    width: 100%;
+    margin-top: 2.5rem;
+  }
+}
+.recent_box {
+  width: 100%;
+  display: inline-block;
+  padding: 10px 20px 15px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgb(194, 191, 191);
+  margin-bottom: 1.25rem;
+  .recent_name_desc {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $LimeLightColor;
+    padding-bottom: 10px;
+    .recents_img_name {
+      display: flex;
+      align-items: center;
+    }
+    span {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+      @include imgOuter;
+      img {
+        @include imgRound;
+      }
+    }
+    .recenet_name_text {
+      display: inline-block;
+    }
+    p {
+      font-size: $myFontSize;
+      color: $myColor;
+      font-family: $myFont;
+      margin-bottom: 0;
+    }
+    p:nth-child(2) {
+      color: $h1color;
+    }
+    h3 {
+      font-size: $h3;
+      color: $redcolor;
+      font-family: $myFont;
+      font-weight: $fontweigt;
+      padding-top: 28px;
+    }
+  }
+  .recent_date {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px 0;
+    h3 {
+      font-size: $h3;
+      color: $ParaTextColor;
+      font-family: $myFont;
+      font-weight: $fontweigt;
+      margin-bottom: 0;
+    }
+    a {
+      font-size: $myFontSize;
+      color: $h1color;
+      font-family: $myFont;
+      text-decoration: none;
+      margin-bottom: 0;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    .recent_name_desc {
+      .recents_img_name {
+        flex-wrap: wrap;
+      }
+      .recenet_name_text {
+        width: 100%;
+      }
+      span {
+        width: 60px;
+        height: 60px;
+        margin-right: 0;
+        margin-left: 5px;
+      }
+    }
+    p {
+      width: 80px;
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .recent_date {
+      flex-wrap: wrap;
+    }
+    padding-right: 10px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .my_trips_boats .nav-tabs .nav-link {
+    width: 100%;
+  }
+  .my_trips_boats .tab-content {
+    margin-top: 1.5rem;
+  }
+}

@@ -1,0 +1,135 @@
+@import "../../../../Assets/sass/Variabels.scss";
+
+.my_dsahboard_list_outer {
+  height: calc(100% - 55px);
+  overflow-y: auto;
+  ul {
+    flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    border: 0;
+    padding-left: 0;
+    li {
+      width: 100%;
+      display: inline-block;
+      margin-bottom: 1.25rem;
+      .dropdown {
+        padding: 0.5rem 1.25rem;
+        a,
+        .btn {
+          width: 100%;
+          border: 0;
+          text-align: left;
+          border-radius: 0;
+          padding: 0.5rem 1.25rem;
+          font-size: $myFontSizeTwo;
+          color: $ParaTextColor;
+          font-weight: $fontweigt;
+          font-family: $myFont;
+          position: relative;
+          padding: 0;
+          &.dropdown-toggle::after {
+            border: 0;
+            content: "\f107";
+            font-family: "Font Awesome 6 Free";
+            color: $myColor;
+            vertical-align: initial;
+            right: 10px;
+            position: absolute;
+          }
+          &:focus {
+            box-shadow: none;
+            outline: none;
+          }
+          span {
+            margin-right: 1rem;
+          }
+          p {
+            display: inline-block;
+            margin-bottom: 0;
+          }
+          .my_trip_active {
+            display: none;
+          }
+          &.show .my_trip_inactive {
+            display: none;
+          }
+          &.show .my_trip_active {
+            display: inline-block;
+          }
+          &.show p {
+            color: $myColor;
+          }
+        }
+        ul {
+          padding-top: 1rem;
+          padding-left: 3.2125rem;
+          li {
+            .dropdown-item {
+              padding-left: 0.5rem;
+              &:hover {
+              }
+            }
+          }
+        }
+      }
+
+      .nav-link {
+        width: 100%;
+        border: 0;
+        text-align: left;
+        border-radius: 0;
+        padding: 0.5rem 1.25rem;
+        font-size: $myFontSizeTwo;
+        color: $ParaTextColor;
+        font-weight: $fontweigt;
+        font-family: $myFont;
+        &.active {
+          border: 0;
+          color: $h1color;
+          span {
+            color: $myColor;
+          }
+        }
+        span {
+          margin-right: 1rem;
+        }
+        &:hover {
+          color: $h1color;
+        }
+        .paymentIconActive {
+          display: none;
+        }
+        p {
+          display: inline-block;
+          margin-bottom: 0;
+        }
+      }
+      .payment_link.active {
+        .paymentIconActive {
+          display: inline-block;
+        }
+        .paymentIcon {
+          display: none;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    ul li .nav-link p,
+    ul li .dropdown .btn p,
+    ul li .dropdown a p {
+      display: none;
+    }
+    ul li {
+      margin-bottom: 1rem;
+    }
+    ul li .dropdown .btn.dropdown-toggle::after {
+      right: -14px;
+      top: 4px;
+    }
+    ul li .dropdown ul {
+      padding-left: 10px;
+    }
+  }
+}

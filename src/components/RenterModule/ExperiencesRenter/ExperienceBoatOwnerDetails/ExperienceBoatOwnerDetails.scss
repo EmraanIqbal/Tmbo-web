@@ -1,0 +1,102 @@
+@import "../../../../Assets/sass/Variabels.scss";
+@mixin prefonts {
+  font-size: $h2;
+  color: $h1color;
+  font-weight: $fontweigt;
+  font-family: $myFont;
+}
+@mixin ImageOuter {
+  border-radius: 50%;
+  display: inline-block;
+}
+@mixin imagecover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.experience_owner_details {
+  width: 100%;
+  display: inline-block;
+  padding: 20px 30px 20px 7.5rem;
+  .Bdetails_inner p small {
+    color: $ParaTextColor;
+  }
+  .view_docks {
+    margin-top: 1.3rem;
+    line-height: 53px;
+  }
+}
+
+.exp_owner_img_outer {
+  display: inline-block;
+  margin-bottom: 4rem;
+  .exp_owner_img {
+    width: 150px;
+    height: 150px;
+    @include ImageOuter;
+    img {
+      @include imagecover;
+    }
+  }
+  p {
+    font-size: $myFontSize;
+    color: $myColor;
+    font-family: $myFont;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 2rem;
+  }
+  .rating {
+    text-align: center;
+  }
+}
+.exp_chat_with {
+  float: right;
+  padding-top: 1rem;
+  p {
+    font-size: $myFontSize;
+    color: $myColor;
+    font-family: $myFont;
+    display: inline-block;
+    margin-right: 2rem;
+  }
+  a img {
+    width: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .exp_owner_img_outer .exp_owner_img {
+    width: 120px;
+    height: 120px;
+  }
+  .experience_owner_details {
+    padding: 20px 20px 20px 3rem;
+  }
+  .exp_owner_img_outer {
+      margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 575px) {
+    .experience_owner_details {
+      padding: 20px;
+    }
+    .exp_owner_img_outer {
+        margin-bottom: 1rem;
+    }
+    .exp_chat_with {
+        float: none;
+        margin-bottom: 1rem;
+    }
+    .experience_owner_details {
+        .Bdetails_inner {
+            flex-wrap: wrap;
+        }
+        .Bdetails_inner p {
+            width: 100%;
+        }
+    }
+    .edit_pro_back {
+        padding: 2rem 0rem;
+    }
+  }

@@ -1,0 +1,173 @@
+@import "../../../Assets/sass/Variabels.scss";
+#calenderModal {
+  z-index: 9999;
+}
+.availabilty_modal {
+  overflow-y: auto;
+  .btn-close {
+    background-color: #a60c0c;
+    border-radius: 50%;
+    opacity: 1;
+    background-image: url("../../../Assets/RenterImages/close-icon.svg");
+    position: absolute;
+    right: 16px;
+    top: 13px;
+    padding: 6px;
+    background-size: 12px;
+  }
+  .MuiBox-root {
+    width: 100%;
+    overflow-y: auto;
+    height: 60%;
+  }
+}
+.avilalbility_heading {
+  font-size: $h2;
+  font-weight: bold;
+  color: $myColor;
+  font-family: $myFont;
+}
+.year_input {
+  .react-datepicker__year .react-datepicker__year-text {
+    width: 100%;
+    font-size: $myFontSize;
+    height: 34px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .react-datepicker__year {
+    height: 250px;
+    overflow: auto;
+    z-index: 99999999;
+  }
+  .react-datepicker-popper {
+    z-index: 999;
+  }
+  .react-datepicker__header.react-datepicker-year-header {
+    display: none;
+  }
+  .react-datepicker__navigation {
+    display: none;
+  }
+  input {
+    color: #000000;
+    font-weight: bold;
+    font-family: $myFont;
+    font-size: $myFontSizeSmall;
+    height: 42px;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+}
+.whole_year {
+  display: flex;
+  margin-top: 1rem;
+  justify-content: space-between;
+  p {
+    font-size: $myFont;
+    font-size: $myFontSize;
+    color: $myColor;
+  }
+  .switch {
+    width: 61px;
+    height: 30px;
+    .slider:before {
+      border-radius: 47%;
+    }
+    .slider:after {
+      content: "";
+    }
+    .slider:before {
+      height: 30px;
+      top: -1px;
+    }
+    input:checked + .slider:before {
+      transform: translateX(48px);
+    }
+  }
+  .switch input:checked + .slider::before {
+    left: -24px;
+  }
+  .switch input:checked + .slider::after {
+    content: "";
+  }
+}
+.yearly_checkbox {
+  .inputGroup label:after {
+    right: initial;
+    left: 8px;
+  }
+  .inputGroup label {
+    box-shadow: 0 0 3px;
+    border-radius: 8px;
+    padding: 10px;
+    padding-left: 3.5rem;
+  }
+}
+.avail_month_label {
+  width: 100%;
+  margin: 8px;
+  display: inline-block;
+  .MuiInput-underline:before {
+    border: 0;
+  }
+  .MuiInputLabel-formControl,
+  .MuiFormLabel-root.Mui-focused {
+    transform: translate(0, 1rem);
+    color: #000;
+  }
+  .MuiSelect-select.MuiSelect-select {
+    height: 28px;
+    font-size: $myFontSizeSmall;
+    color: #000;
+    font-family: $myFont;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    font-weight: bold;
+  }
+  label + .MuiInput-formControl {
+    margin-top: 2.7rem;
+  }
+  .MuiInput-underline:hover:not(.Mui-disabled):before {
+    border-bottom: 0;
+  }
+}
+.MuiCheckbox-colorSecondary.Mui-checked {
+  color: #54e0c7 !important;
+  border-radius: 100px;
+}
+#menu- ul .MuiListItem-root.Mui-selected,
+.MuiListItem-root.Mui-selected:hover {
+  background-color: $myColor !important;
+  color: white;
+}
+.year_input {
+  .react-datepicker-popper[data-placement^="bottom"]
+    .react-datepicker__triangle::before,
+  .react-datepicker-popper[data-placement^="bottom"]
+    .react-datepicker__triangle::after {
+    left: -14px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .availabilty_modal .MuiBox-root {
+    height: 66%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .availabilty_modal .MuiBox-root {
+    width: 98%;
+    height: 63%;
+  }
+}

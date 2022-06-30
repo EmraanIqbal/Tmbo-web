@@ -1,0 +1,33 @@
+#googleMaps input {
+  margin-bottom: 10px;
+  border-radius: 4px;
+  padding: 6px 12px;
+  border: 1px solid #ced4da;
+}
+
+.map-div {
+  width: 71% !important;
+  height: 35% !important;
+}
+
+@media screen and (max-width: 1199px) {
+  .map-div {
+    width: 64% !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  .map-div {
+    width: 51% !important;
+    height: 26% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .map-div {
+    width: 44% !important;
+  }
+}
+@media screen and (max-width: 575px) {
+  .map-div {
+    width: 35% !important;
+  }
+}

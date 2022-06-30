@@ -1,0 +1,118 @@
+@import "../../../../../Assets/sass/Variabels.scss";
+#progressbar .approved2::after {
+  border-bottom: 3px solid $redcolor;
+}
+.boat_booking_center {
+  .my_trips_booking_details {
+    padding: 20px;
+    box-shadow: none;
+    border-radius: 20px;
+    .exp_name {
+      font-size: $h3;
+      color: $myColor;
+      font-family: $myFont;
+      display: inline-block;
+      span {
+        font-size: $myFontSize;
+      }
+    }
+    h3 {
+      display: inline-block;
+    }
+    .Bdetails_inner h3 {
+      font-size: $myFontSize;
+      color: $redcolor;
+      font-weight: 400;
+    }
+    .edit_booking_btn {
+      float: right;
+      min-width: 130px;
+      height: 40px;
+      line-height: initial;
+      text-decoration: none;
+    }
+  }
+  .send_book_request {
+    margin: 1.875rem auto 0;
+    line-height: 55px;
+  }
+
+  @media screen and (max-width: 575px) {
+    .my_trips_booking_details .edit_booking_btn {
+      float: none;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.renterLink {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #0d6efd;
+  cursor: pointer;
+}
+
+.exp_select_slot {
+  .slot_times {
+    padding-left: 3.3rem;
+  }
+  .inputGroup {
+    border-radius: 14px;
+    box-shadow: 0 0 4px lightgrey;
+    label {
+      &::after {
+        right: initial;
+      }
+    }
+    input:checked ~ label {
+      border-radius: 14px;
+    }
+  }
+}
+
+.boats_detail_owner_inner {
+  a {
+    text-decoration: none;
+  }
+}
+.select_hours_main {
+  label:nth-child(1) {
+    margin-bottom: 0;
+  }
+}
+/* Hide Calendar Icon In Chrome */
+// input[type="date"]::-webkit-inner-spin-button,
+// input[type="date"]::-webkit-calendar-picker-indicator {
+//   display: none;
+//   -webkit-appearance: none;
+// }
+.should_equal_text {
+  font-size: $myFontSizeSmall;
+  color: $myColor;
+  margin: 1rem 0 0;
+  font-family: $myFont;
+}
+.boat_booking_center .my_trips_booking_details {
+  box-shadow: 0;
+}
+.boats_booking_inner_box {
+  .boat_detail_owner_main {
+    .custom-container {
+      padding: 0;
+    }
+    .exp_detail_host {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .flex_mode_resp {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .Bdetails_inner p:first-child {
+    width: 70%;
+  }
+}

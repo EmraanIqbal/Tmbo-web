@@ -1,0 +1,100 @@
+@import "../../../../Assets/sass/Variabels.scss";
+
+.banner-main-renter {
+  background-image: url(../../../../Assets/RenterImages/banner-img.png);
+  padding-bottom: 2rem;
+  padding-top: 6.25rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .banner-heding {
+    color: #eeeeff;
+    font-size: 2.5rem;
+    font-weight: $fontweigt;
+    max-width: 779px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: $myFontSize;
+    color: #eeeeff;
+    text-align: center;
+    font-family: $myFont;
+    font-weight: $fontweigt;
+    max-width: 759px;
+    margin: auto;
+    padding-bottom: 2rem;
+    line-height: 2rem;
+  }
+  .banner-search-section {
+    max-width: 661px;
+    margin: 0 auto;
+    background-color: rgba(52, 83, 86, 0.5);
+    padding: 20px;
+    border-radius: 19px;
+
+    .banner-input {
+      width: 44%;
+      border-radius: 10px;
+      background-color: #fff;
+      height: 42px;
+      padding: 15px 20px;
+      color: #cccccc;
+      font-size: $myFontSize;
+      border: 0;
+      margin-right: 5px;
+      &:focus {
+        box-shadow: none;
+        outline: 0;
+      }
+      &::placeholder {
+        color: #cccccc;
+      }
+    }
+    .btn {
+      border-radius: 10px;
+      background-color: #fff;
+      height: 42px;
+      &:focus {
+        box-shadow: none;
+      }
+      img {
+        max-width: 26px;
+      }
+    }
+    .react-datepicker-wrapper {
+      width: 44%;
+      .banner-input {
+        width: 100%;
+        font-weight: 400;
+      }
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    padding-top: 5.25rem;
+  }
+  @media screen and (max-width: 767px) {
+    .banner-heding {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .banner-search-section {
+      .banner-input, .react-datepicker-wrapper {
+        width: 43%;
+      }
+    }
+  }
+  @media screen and (max-width: 575px) {
+    padding-top: 3.25rem;
+    .banner-search-section {
+      .banner-input, .react-datepicker-wrapper {
+        width: 100%;
+        margin: 0px 0px 15px;
+      }
+      .btn {
+        width: 30%;
+        margin: auto;
+      }
+    }
+  }
+}

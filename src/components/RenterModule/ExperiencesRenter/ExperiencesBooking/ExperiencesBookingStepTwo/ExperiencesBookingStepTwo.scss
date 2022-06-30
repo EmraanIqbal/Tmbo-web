@@ -1,0 +1,83 @@
+@import "../../../../../Assets/sass/Variabels.scss";
+#progressbar .approved2::after {
+  border-bottom: 3px solid $redcolor;
+}
+.boat_booking_center {
+  .my_trips_booking_details {
+    padding: 20px;
+    box-shadow: 0 0 4px lightgrey;
+    border-radius: 20px;
+    h3 {
+      display: inline-block;
+    }
+    .Bdetails_inner h3 {
+      font-size: $myFontSize;
+      color: $redcolor;
+      font-weight: 400;
+    }
+    .edit_booking_btn {
+      float: right;
+      min-width: 130px;
+      height: 40px;
+      line-height: 38px;
+      text-decoration: none;
+    }
+  }
+  .send_book_request {
+    margin: 1.875rem auto 0;
+    line-height: 55px;
+  }
+
+  @media screen and (max-width: 575px) {
+    .my_trips_booking_details .edit_booking_btn {
+      float: none;
+      margin-bottom: 10px;
+      margin-left: 2rem;
+    }
+  }
+}
+//   modal style start
+#complete_booking_modal {
+  .modal-content {
+    border-radius: 30px;
+  }
+  .modal-header {
+    position: relative;
+    border: 0;
+    .btn-close {
+      background-color: #a60c0c;
+      border-radius: 50%;
+      opacity: 1;
+      background-image: url("../../../../../Assets/RenterImages/close-icon.svg");
+      position: absolute;
+      right: 22px;
+      top: 21px;
+      padding: 6px;
+      background-size: 12px;
+    }
+  }
+  .modal-body {
+    padding: 4rem 2rem;
+    h3 {
+      font-size: $h2;
+      font-weight: $fontweigt;
+      color: $myColor;
+      text-align: center;
+      font-family: $myFont;
+      line-height: 1.88rem;
+    }
+  }
+  .modal-footer {
+    border-top: 0;
+    justify-content: center;
+    padding-bottom: 2.5rem;
+  }
+  @media screen and (max-width: 575px) {
+    .modal-body {
+      padding: 2rem 1rem;
+    }
+    .modal-footer {
+      padding: 0 1rem 2rem;
+    }
+  }
+}

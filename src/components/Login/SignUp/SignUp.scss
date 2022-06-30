@@ -1,0 +1,150 @@
+.sign-up-wrap {
+  height: 100%;
+  overflow-y: auto;
+  .center-card {
+    height: 79%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .css-1d1r5q-MuiFormHelperText-root.Mui-error {
+    margin-top: 0.25rem;
+    font-size: 0.875em;
+    color: #dc3545;
+  }
+  label {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding-bottom: 4px;
+  }
+
+  .name-field {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .form-group {
+      width: 47%;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .MuiFormControl-root.MuiTextField-root {
+    background: white;
+    border: 1px solid white;
+    width: 100%;
+    height: 40px;
+    border-radius: 2px;
+  }
+
+  ::after {
+    border-bottom: none !important;
+  }
+
+  ::before {
+    border-bottom: none !important;
+  }
+
+  .inner-center-card.sign-up {
+    width: 600px;
+    padding: 25px 50px;
+  }
+  .signup_radio {
+    display: flex;
+    width: 47%;
+    .inputGroup {
+      width: 50%;
+      background-color: transparent;
+      label {
+        padding-left: 0;
+        padding-top: 0;
+        font-size: 0.875rem;
+        font-weight: normal;
+        &::before {
+          background: transparent;
+        }
+        &:after {
+          width: 22px;
+          height: 22px;
+          background-position: -3px -2px;
+          right: 22px;
+        }
+      }
+      .owner_radio_label {
+        padding-left: 20px;
+        &:after {
+          right: 0;
+        }
+      }
+      input:checked ~ label:after {
+        background-color: var(--mainOpacityColor);
+        border-color: var(--mainOpacityColor);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .sign-up-wrap .center-card {
+    height: 100%;
+  }
+}
+@media screen and (min-width:1200px) and (max-width: 1440px) {
+  .dont-accout {
+    margin-bottom: 14px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .sign-up-wrap .inner-center-card.sign-up {
+    overflow-y: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sign-up-wrap .inner-center-card.sign-up {
+    width: 90%;
+    padding: 30px 40px;
+  }
+  .sign-up-wrap .navbar {
+    flex-wrap: nowrap;
+  }
+  .sign-up-wrap .navbar .main-button {
+    white-space: nowrap;
+  }
+  .sign-up-wrap .navbar-light .navbar-brand {
+    width: 32%;
+  }
+  .sign-up-wrap .signup_radio {
+    width: 100%;
+  }
+  .sign-up-wrap .signup_radio .inputGroup {
+    label:after {
+      right: 32px;
+    }
+    .owner_radio_label:after {
+      right: 32px;
+    }
+    .owner_radio_label {
+      padding-left: 0;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .sign-up-wrap .name-field {
+    flex-wrap: wrap;
+  }
+  .sign-up-wrap .name-field .form-group {
+    width: 100%;
+  }
+  .sign-up-wrap .inner-center-card.sign-up {
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 5px;
+  }
+  .sign-up-wrap .center-card {
+    height: calc(100% - 93px);
+  }
+}

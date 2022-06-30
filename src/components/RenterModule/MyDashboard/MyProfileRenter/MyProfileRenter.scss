@@ -1,0 +1,205 @@
+@import "../../../../Assets/sass//Variabels.scss";
+@mixin circle {
+  border-radius: 50%;
+  display: inline-block;
+}
+@mixin circleImage {
+  border-radius: 50%;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@mixin prelist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@mixin preflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my_db_icon_mob {
+  display: none;
+}
+.my_dsahboard_inner {
+  clear: both;
+  overflow: hidden;
+  box-shadow: 0 0 6px lightgrey;
+}
+.top_spac {
+  margin: 20px 0 0;
+}
+.my_dsahboard_aside {
+  background: #fff none repeat scroll 0 0;
+  float: left;
+  overflow: hidden;
+  width: 25%;
+  box-shadow: 5px 0 5px -5px lightgray, -5px 0 10px -40px lightgray;
+}
+.my_dsahboard_heding {
+  padding: 10px 29px 10px 20px;
+  overflow: hidden;
+  border-bottom: 1px solid #eaecef;
+  h2 {
+    color: $myColor;
+  }
+}
+
+.chat_img {
+  @include circle;
+  position: relative;
+  float: left;
+  width: 47px;
+  height: 47px;
+  img {
+    @include circleImage;
+  }
+}
+
+.chat_people {
+  overflow: hidden;
+  clear: both;
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: 15px;
+}
+.my_dsahboard_list {
+  margin: 0;
+  padding: 18px 16px 0px;
+}
+.my_dashboard_detail {
+  float: left;
+  padding: 20px 0px 0 0px;
+  width: 75%;
+  // box-shadow: 0 0 4px lightgrey;
+  .dashboards_history {
+    height: 100%;
+    overflow-y: auto;
+    box-shadow: 0 0 4px lightgrey;
+    padding: 20px 40px 0 70px;
+    min-height: 100vh;
+  }
+}
+.my_profile_hed {
+  padding: 0px 15px 17.33px;
+  h3 {
+    font-size: 1rem;
+    color: #9b9b9b;
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+}
+.edit-profile {
+  text-align: right;
+  font-size: 1.25rem;
+}
+.db_profile_name_img {
+  width: 170px;
+  text-align: center;
+  h3 {
+    font-size: $h3;
+    font-weight: $fontweigt;
+    color: $myColor;
+    font-family: $myFont;
+    padding-top: 5px;
+  }
+}
+.profile_detail {
+  width: 80%;
+  display: inline-block;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+.profile_info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .profile_info_names {
+    width: 50%;
+  }
+  h3 {
+    font-size: $ProName;
+    font-family: $myFont;
+    color: $h1color;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: $myFontSize;
+    color: $ParaTextColor;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+  }
+}
+.my_db_pro_img {
+  @include circle;
+  width: 140px;
+  height: 140px;
+  img {
+    @include circleImage;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .my_dsahboard_heding h2 {
+    font-size: 1rem;
+  }
+  .my_dsahboard_list_outer ul {
+    padding-top: 2rem;
+  }
+  .my_dsahboard_aside {
+    width: 30%;
+  }
+  .my_dashboard_detail {
+    width: 70%;
+  }
+  .my_dashboard_detail {
+    padding-top: 11px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .my_db_icon_mob {
+    display: block;
+  }
+  .my_dsahboard_heding h2 {
+    display: none;
+  }
+  .my_dashboard_detail .dashboards_history {
+    padding: 20px 13px 0 30px;
+  }
+  .my_db_pro_img {
+    width: 120px;
+    height: 120px;
+  }
+  .profile_info .profile_info_names {
+    width: 100%;
+  }
+  .my_dsahboard_aside {
+    width: 58px;
+  }
+  .my_dashboard_detail {
+    width: calc(100% - 58px);
+    padding-top: 8px;
+  }
+  .my_dsahboard_heding {
+    padding: 10px;
+  }
+
+  .my_dsahboard_list {
+    margin: 0;
+    padding: 6px 0 5px 8px;
+  }
+  .profile_detail {
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .received_msg {
+    width: calc(100% - 40px);
+  }
+  .my_db_icon_mob img {
+    max-width: 100%;
+  }
+}

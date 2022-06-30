@@ -1,0 +1,24 @@
+.boats_detail_wrapper {
+  width: 100%;
+  display: inline-block;
+  background-color: #fff;
+}
+.booking_selection_main .MuiBox-root {
+  width: 100%;
+}
+.react-datepicker-popper {
+  z-index: 99;
+}
+.boats_booking_main {
+  .react-datepicker-popper[data-placement^="bottom"]
+    .react-datepicker__triangle::before,
+  .react-datepicker-popper[data-placement^="bottom"]
+    .react-datepicker__triangle::after {
+    left: -14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .booking_selection_main .MuiBox-root {
+    width: 95%;
+  }
+}

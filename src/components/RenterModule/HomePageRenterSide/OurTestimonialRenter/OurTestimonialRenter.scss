@@ -1,0 +1,68 @@
+$myFont: "Lato", sans-serif;
+$myColor: #1d3759;
+$myFontSize: 0.875rem;
+$fontweigt: bold;
+$h3: 1rem;
+$h1: 1.625rem;
+$h1color: #000000;
+$h2: 1.375rem;
+$paraTextColor: #838383;
+
+.OurTestimonial-main {
+  width: 100%;
+  display: inline-block;
+  padding: 50px 0px;
+  background-color: #f9f9f9;
+  h1 {
+    font-size: $h1;
+    color: $h1color;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .testimonial-card {
+    text-align: center;
+    .testimonial-img {
+      width: 80px;
+      height: 80px;
+      display: inline-block;
+      border-radius: 50%;
+      margin: auto;
+      margin-bottom: 1.5rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    p {
+      color: $paraTextColor;
+      font-size: $myFontSize;
+      font-family: $myFont;
+      text-align: center;
+    }
+    .test-para {
+      max-width: 340px;
+      margin: auto;
+      margin-bottom: 1rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    h2 {
+      font-size: $h2;
+      color: $h1color;
+      font-weight: $fontweigt;
+      font-family: $myFont;
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    padding-top: 40px;
+  }
+}

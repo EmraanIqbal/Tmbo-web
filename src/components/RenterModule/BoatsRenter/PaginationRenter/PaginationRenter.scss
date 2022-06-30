@@ -1,0 +1,31 @@
+@import "../../../../Assets/sass/Variabels.scss";
+
+.pagination_wrapper {
+  width: 100%;
+  display: inline-block;
+  padding-top: 1.25rem;
+  padding-bottom: 2.5rem;
+  ul {
+    li {
+      margin: 0px 5px;
+
+      .page-link {
+        font-size: $myFontSize;
+        font-family: $myFont;
+        color: $myColor;
+        border: 0;
+        box-shadow: 0 3px 7px #ccc;
+        border-radius: 0;
+        i {
+            font-size: 0.75rem;
+        }
+      }
+    }
+    .active {
+      .page-link {
+        color: #fff;
+        background-color: $myColor;
+      }
+    }
+  }
+}

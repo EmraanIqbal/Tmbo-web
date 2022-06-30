@@ -1,0 +1,9 @@
+<svg id="_Icons_Plane" data-name="_Icons / Plane" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42.313" height="42.313" viewBox="0 0 42.313 42.313">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1b3659"/>
+      <stop offset="1" stop-color="#001f44"/>
+    </linearGradient>
+  </defs>
+  <path id="Path_2" data-name="Path 2" d="M0,38.786V28.208a5.517,5.517,0,0,1,.5-2.1,5.951,5.951,0,0,1,1.855-1.219l22.324-3.73h0L2.359,17.427A7.625,7.625,0,0,1,.5,16.083,5.394,5.394,0,0,1,0,14.1V3.527A3.527,3.527,0,0,1,5.346.506L41.238,19.532l0,0a1.763,1.763,0,0,1-.005,3.247L5.346,41.807A3.527,3.527,0,0,1,0,38.786Z" transform="translate(0)" fill="url(#linear-gradient)"/>
+</svg>

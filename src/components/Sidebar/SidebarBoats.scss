@@ -1,0 +1,110 @@
+@import "../../Assets/sass/Variabels.scss";
+
+.notify_inner_img {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  border-radius: 100px;
+  margin-right: 2rem;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.notify_menu_text {
+  margin-right: 2.5rem;
+  width: calc(100% - 167px);
+  h3 {
+    font-size: $h3;
+    color: $h1color;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+  }
+  p {
+    font-size: $myFontSize;
+    color: $h1color;
+    font-family: $myFont;
+    margin-bottom: 0;
+  }
+}
+.notify_time {
+  font-size: $myFontSizeSmall;
+  color: $ParaTextColor;
+  font-family: $myFont;
+  margin-bottom: 1.8rem;
+}
+.notification_list_menu {
+  background-color: #efefef;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  position: relative;
+  min-width: 25rem;
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+
+    border-bottom: 15px solid #efefef;
+    position: absolute;
+    right: 30px;
+    top: -10px;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 1.5rem;
+    justify-content: space-between;
+  }
+}
+.bell_btn {
+  &:focus {
+    box-shadow: none;
+  }
+  &:after {
+    border: 0;
+  }
+  p {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 991px) {
+  .notification_list_menu {
+    min-width: auto;
+    li {
+      padding: 0.5rem;
+      flex-wrap: wrap;
+    }
+  }
+  .notify_inner_img {
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  .notify_menu_text {
+    margin-right: 0;
+    width: 100%;
+  }
+  .notify_time {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  #primary-search-account-menu-mobile
+    .css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+    display: table;
+  }
+  .notification_list_menu {
+    overflow-y: auto;
+    height: calc(100vh - 100px);
+  }
+  .nav-wrapper-sidebar {
+    .css-cvhtoe-MuiButtonBase-root-MuiListItemButton-root.makeStyles-logout-4,
+    .css-cvhtoe-MuiButtonBase-root-MuiListItemButton-root.makeStyles-logout-9 {
+      bottom: -20px;
+    }
+  }
+}

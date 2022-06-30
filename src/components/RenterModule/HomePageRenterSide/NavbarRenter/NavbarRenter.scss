@@ -1,0 +1,188 @@
+
+@import "../../../../Assets/sass/Variabels.scss";
+
+@mixin comoncode {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar-renter-main {
+  width: 100%;
+  display: inline-block;
+  background-color: #fff;
+  font-family: "Lato", sans-serif;
+  border-bottom: 1px solid #707070;
+  .navbar-light {
+    ul {
+      @include comoncode;
+      li {
+        .nav-link {
+          font-weight: bold;
+          font-size: $myFontSizeTwo;
+          line-height: 2rem;
+          color: #cccccc;
+          padding-right: 1.5rem;
+          &:hover {
+            color: $myColor;
+          }
+          &.active {
+            color: $myColor;
+          }
+        }
+      }
+      .active .nav-link {
+        color: $myColor;
+      }
+    }
+  }
+  .list-boat-btn {
+    background-color: $myColor;
+    color: #fff;
+    border-radius: 0.625rem;
+    border: 1px solid $myColor;
+    transition: all 0.3s;
+    display: inline-block;
+    font-size: $myFontSizeTwo;
+    font-weight: bold;
+  }
+  .navbar-renter-last {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .navbar-renter-last .list-boat-btn {
+    margin-right: 1.25rem;
+    margin-left: 15px;
+    &:focus {
+      box-shadow: none;
+    }
+    &:hover {
+      background-color: #fff;
+      box-shadow: 0px 15px 20px rgba(27, 54, 89, 0.4);
+      color: $myColor;
+      transform: translateY(-7px);
+    }
+    &:active {
+      transform: translateY(-1px);
+    }
+  }
+  .navbar-renter-last span {
+    margin-right: 1.25rem;
+    color: #9b9b9b;
+  }
+  .navbar-renter-last .renter-pro-dropdown {
+    margin-right: 0;
+  }
+  .renter-notify {
+    position: relative;
+  }
+  .badge {
+    position: absolute;
+    top: -6px;
+    padding: 5px;
+    background-color: $myColor;
+    color: #fff !important;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 8px;
+  }
+  .renter-pro-dropdown {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+  .navbar-renter-main .navbar-renter-last .renter-pro-dropdown {
+    margin-right: 0;
+  }
+  .renter-pro-dropdown img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .navbar-renter-last .dropdown-menu {
+    left: auto;
+    right: 0;
+    border: 0;
+    border-radius: 1.125rem;
+    padding: 1rem 0;
+    box-shadow: 0 -3px 6px lightgrey;
+  }
+  .navbar-renter-last .dropdown-menu li .dropdown-item {
+    color: $myColor;
+    font-size: $myFontSizeTwo;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+  }
+  .navbar-renter-last .dropdown-toggle {
+    color: $myColor;
+    font-size: $myFontSizeTwo;
+    font-weight: bold;
+    font-family: $myFont;
+  }
+  .navbar-renter-last .dropdown-toggle::after {
+    display: none;
+  }
+  .navbar-renter-last .dropdown-toggle:focus {
+    box-shadow: none;
+  }
+}
+
+// Media start
+@media only screen and (max-width: 1199px) {
+  .navbar-renter-main .navbar-light ul li .nav-link {
+    padding-right: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+  .navbar-renter-main .list-boat-btn,
+  .navbar-renter-main .navbar-renter-last .dropdown-toggle,
+  .navbar-renter-main .navbar-renter-last .dropdown-menu li .dropdown-item {
+    font-size: 0.875rem;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .navbar-renter-main .navbar-renter-last .list-boat-btn {
+    margin-left: 0;
+  }
+  .navbar-renter-main .navbar-renter-last .dropdown-menu {
+    border-radius: 10px;
+    padding: 0.5rem;
+  }
+  .navbar-renter-main {
+    .navbar-brand {
+      img {
+        max-width: 120px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+}
+@media only screen and (max-width: 575px) {
+  .navbar-renter-main .navbar-renter-last .list-boat-btn,
+  .navbar-renter-main .navbar-renter-last span {
+    margin-right: 1rem;
+  }
+  .navbar-renter-main .navbar-renter-last .badge {
+    margin-right: 0;
+  }
+  .navbar-renter-main .navbar-renter-last .dropdown-toggle {
+    padding: 0;
+  }
+  .navbar-renter-main .renter-pro-dropdown {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0;
+  }
+  .navbar-renter-main .navbar-renter-last .renter-pro-dropdown {
+    margin-right: 0;
+  }
+}

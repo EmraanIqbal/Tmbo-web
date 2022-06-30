@@ -1,0 +1,83 @@
+@import "../../../../../Assets/sass/Variabels.scss";
+#ChatWthPopup {
+  .modal-dialog-centered {
+    min-height: calc(100% - 0rem);
+  }
+  .modal-dialog {
+    max-width: 100%;
+    margin: 0;
+    .modal-content {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      right: 88px;
+      max-width: 500px;
+    }
+  }
+  .chat_header {
+    font-size: $h3;
+    color: $myColor;
+    font-weight: $fontweigt;
+    font-family: $myFont;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .btn-close {
+    background-color: $redcolor;
+    border-radius: 50%;
+    opacity: 1;
+    background-image: url(../../../../../Assets/RenterImages/close-icon.svg);
+    position: absolute;
+    right: 16px;
+    top: 14px;
+    padding: 6px;
+    background-size: 12px;
+  }
+  .modal-body {
+    padding: 0;
+  }
+}
+.owner_chat_with {
+  .mesgs {
+    width: 100%;
+    padding: 0;
+    .msg_history {
+      box-shadow: none;
+      padding: 20px 41px 0 41px;
+    }
+    .sent_msg {
+      width: 56%;
+      margin: auto;
+      float: right;
+      p {
+          font-weight: 400;
+      }
+    }
+    .received_withd_msg {
+      width: 69%;
+      p {
+          font-size: $myFontSize;
+      }
+    }
+  }
+}
+@media screen and (max-width:767px) {
+    #ChatWthPopup .modal-dialog .modal-content {
+        right: 32px;
+    }
+    
+}
+@media screen and (max-width:575px) {
+    #ChatWthPopup .modal-dialog .modal-content {
+        right: 0;
+    }
+    .owner_chat_with .mesgs .sent_msg,
+    .owner_chat_with .mesgs .received_withd_msg {
+        width: 90%;
+    }
+    .owner_chat_with .mesgs .msg_history {
+        padding: 20px 20px 0px;
+    }
+    
+}
